@@ -1,4 +1,3 @@
-import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.externals import joblib
 
@@ -15,13 +14,10 @@ from sklearn.model_selection import cross_val_score
 
 from numpy import genfromtxt, array, append
 
-IMAGE_WIDTH = 28
-IMAGE_HEIGHT = 28
+# Load train data set 
+data = genfromtxt('train.csv', delimiter=',', skip_header=1)
 
-# Wczytanie pliku csv do tabeli
-data = genfromtxt('digit-recognizer\\train.csv', delimiter=',', skip_header=1)
-
-# Podział na zbiór cech i etykiety
+# Split features and labels
 X = data[:, 1:]
 y = data[:, 0]
 
@@ -34,20 +30,18 @@ imgplot = plt.imshow(img1)
 plt.show()
 """
 
-# Klasyfikatory
 clf1 = KNeighborsClassifier()
 clf2 = GaussianNB()
 clf3 = DecisionTreeClassifier()
 clf4 = SVC()
 
-# Zespół klasyfikatorów, model
 eclf = VotingClassifier(
     estimators=[('KNN', clf1), ('GNB', clf2), ('DT', clf3)], voting='hard')
 eclf = eclf.fit(X, y)
 
 print("Fit score: ", eclf.score(X, y))
 
-# Walidacja krzyżowa 5x2
+# Cross Validation 5x2
 arr = array([])
 
 for i in range(5):
@@ -56,5 +50,5 @@ for i in range(5):
 
 print("Standard deviation", arr.std(), ", Mean: ", arr.mean())
 
-#zapisanie modelu
+# Create model
 joblib.dump(eclf, 'model.joblib')

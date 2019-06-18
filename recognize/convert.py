@@ -9,9 +9,8 @@ import os.path
 def convertPicture(img_path):
 
     img_file = Image.open(img_path)
-    
     img_grey = img_file.convert('L')
-
+    img_file.close()
     value = np.asarray(img_grey.getdata(), dtype=np.int).reshape((img_grey.size[1], img_grey.size[0]))
     value = value.flatten()
 
@@ -27,4 +26,5 @@ def convertPicture(img_path):
         writer.writerow(new_value)
 
     print(img_path + " converting done.")
+    
     return img_path + ".csv"
