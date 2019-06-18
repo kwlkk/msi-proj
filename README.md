@@ -8,7 +8,7 @@
 
 Przed użyciem skryptu main.py należy wygenerować model wykorzystując metsi.py  
 
-Można także pobrać pod adresem: https://drive.google.com/open?id=1bNcpX4By0APLr9Bbo74P7w3FKutBCKW-
+Można go także pobrać pod adresem: https://drive.google.com/open?id=1bNcpX4By0APLr9Bbo74P7w3FKutBCKW-
 
 **main.py** - skrypt obsługiwany z linii komend poprzez argumenty  
 arg1 - single/many  
