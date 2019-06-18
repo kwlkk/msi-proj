@@ -4,7 +4,7 @@
 
 **/imgs** - folder z przykładowo stworzonymi cyframi o rozmiarze 28 x 28 pikseli  
 
-**metsi.py** - służy do wygenerowania modelu na podstawnie zadanego wzoru uczącego. Zapisany jest w formacie .joblib  
+**metsi.py** - służy do wygenerowania modelu na podstawnie zadanego wzoru uczącego. Model zapisany jest w formacie .joblib  
 
 **main.py** - skrypt obsługiwany z linii komend poprzez argumenty  
 arg1 - single/many  
