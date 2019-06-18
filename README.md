@@ -12,4 +12,5 @@ arg2 - ścieżka do modelu
 arg2 - ścieżka do obrazu(dla single) lub pliku csv (dla many)  
 
 Przykładowe użycie:  
-> python main.py single model.joblib 8.png  
+> python main.py single model.joblib imgs/8.png  
+> python main.py single model.joblib test.csv
