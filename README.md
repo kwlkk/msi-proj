@@ -6,7 +6,7 @@
 
 **metsi.py** - służy do wygenerowania modelu na podstawnie zadanego wzoru uczącego. Model zapisany jest w formacie .joblib  
 
-Przed użyciem skryptu main.py należy wygenerować model wykozrystując metsi.py  
+Przed użyciem skryptu main.py należy wygenerować model wykorzystując metsi.py  
 
 **main.py** - skrypt obsługiwany z linii komend poprzez argumenty  
 arg1 - single/many  
